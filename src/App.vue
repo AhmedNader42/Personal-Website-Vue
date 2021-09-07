@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-parallax src="../Assets/mac.jpg" height="700">
+        <v-parallax src="./assets/mac.jpg" height="700">
             <ProfileCard />
         </v-parallax>
 
@@ -21,87 +21,31 @@
                 />
             </svg>
         </v-btn>
-        <!-- <v-container>
+        <SectionTitle title="Projects" />
+        <ProjectPreview />
 
-        </v-container>
-        <v-container>
-            <v-row justify="center">
-                <v-expansion-panels popout>
-                    <v-expansion-panel v-for="(item, i) in 5" :key="i">
-                        <v-expansion-panel-header>Item</v-expansion-panel-header>
-                        <v-expansion-panel-content>
-                            Content
-                        </v-expansion-panel-content>
-                    </v-expansion-panel>
-                </v-expansion-panels>
-            </v-row>
-        </v-container>
-        <v-container>
-            <v-v-containerider></v-v-containerider>
-            <v-subheader>Tech Stack</v-subheader>
-            <v-divider></v-divider>
-
-            <v-chip-group>
-                <v-chip class="ma-3" color="orange" text-color="white">
-                    <v-icon left>
-                        mdi-label
-                    </v-icon>
-                    SwiftUI
-                </v-chip>
-                <v-chip class="ma-3" color="orange" text-color="white">
-                    <v-icon left>
-                        mdi-label
-                    </v-icon>
-                    SwiftUI
-                </v-chip>
-                <v-chip class="ma-3" color="orange" text-color="white">
-                    <v-icon left>
-                        mdi-label
-                    </v-icon>
-                    SwiftUI
-                </v-chip>
-            </v-chip-group>
-        </v-container> -->
+        <SectionTitle title="" />
     </v-app>
 </template>
 
 <script>
-import Timeline from "@/components/Timeline";
-import SectionTitle from "@/components/SectionTitle";
-import ProfileCard from "@/components/ProfileCard";
-import Veutify from "./plugins/vuetify";
+import Timeline from '@/components/Timeline';
+import SectionTitle from '@/components/SectionTitle';
+import ProfileCard from '@/components/ProfileCard';
+import ProjectPreview from '@/components/ProjectPreview';
+import Veutify from './plugins/vuetify';
 export default {
-    name: "App",
+    name: 'App',
 
-    components: { Timeline, SectionTitle, ProfileCard },
+    components: { Timeline, SectionTitle, ProfileCard, ProjectPreview },
 
     data: () => ({}),
     methods: {
         changeTheme: () => {
-            console.log("On click");
+            console.log('On click');
             console.log(Veutify);
             Veutify.framework.theme.isDark = !Veutify.framework.theme.isDark;
         },
     },
 };
 </script>
-
-// years: [ // { // type: "star", // color: "cyan", // tag: "2018-01-14", // entity: "(Computer Science - Cairo
-University)", // content: // "It was the start of my lifelong learning journey that sparked my love for programming. I
-graduated in 2019 with a grade of Very Good.", // }, // { // type: "star", // color: "green", // tag: "2018-01-14", //
-entity: "(iOS Developer - KickstartInteractive)", // content: // "My first professional job in the summer of 2017. While
-there I worked on VKader as an iOS developer. A great learning experience and a challenging project in terms of scale
-and size. I gained a lot of experience over the course of completing the App.", // }, // { // type: "star", // color:
-"pink", // tag: "2018-01-14", // entity: "(iOS Developer - IntCore)", // content: // "Next summer I was part of the
-IntCore iOS team working on SnapCars which was a different experience. It was a collaborative experience that taught me
-how to pay attention to the details no matter how small.", // }, // { // type: "star", // color: "amber", // tag:
-"2018-01-14", // entity: "(Computer Science - Cairo University)", // content: // "The year I graduated from college. I
-was working on my graduation project with 4 other teammates. The idea was to predict whether the skin shown in the photo
-was benign or malignant of skin cancer. We trained a model on a dataset containing 55+GB of Images.", // }, // { //
-type: "star", // color: "orange", // tag: "2018-01-14", // entity: "", // content: // " (Research Center - Egyptian
-Armed Forces) From June 2020 until June 2021 I was doing my mandatory military service. I was lucky enough to be in a
-place where programming was a viable option. I was mostly working with web technologies such as HTML, CSS, Javascript
-and both SQL and NoSQL databases. I worked on different kinds of classified projects it helped develop my software
-engineering skills and taught me a lot about handling complexity. It was a tough environment with lots of tasks and
-pressure to get things out quickly and correctly. I learned constant iterations are the best way to improve a software
-project and also a lot of team working skills and other soft skills as well as technical.", // }, // ],

@@ -1,8 +1,125 @@
-<template> </template>
+<template>
+    <v-row style="padding: 10px; margin 10px">
+        <v-expansion-panels inset>
+            <v-expansion-panel v-for="item in items" :key="item.id">
+                <v-expansion-panel-header>
+                    <p class="fs-3">
+                        {{ item.title }}
+                    </p></v-expansion-panel-header
+                >
+
+                <v-expansion-panel-content>
+                    <v-slide-group style="margin: 10px;">
+                        <v-slide-item v-for="tech in item.tech_stack" :key="tech">
+                            <v-btn class="mx-2 fs-5" :input-value="active" color="primary">
+                                {{ tech }}
+                            </v-btn>
+                        </v-slide-item>
+                    </v-slide-group>
+
+                    <v-img
+                        contain
+                        v-if="item.preview != undefined"
+                        :src="require(`../assets/${item.preview}`)"
+                        max-height="700px"
+                    ></v-img>
+                    <v-btn
+                        v-if="item.link != undefined"
+                        :href="item.link"
+                        x-large
+                        elevation="5"
+                        color="secondary"
+                        style="margin: 10px; padding: 10px"
+                    >
+                        Demo
+                    </v-btn>
+                    <v-btn
+                        v-if="item.code != undefined"
+                        :href="item.code"
+                        x-large
+                        elevation="5"
+                        color="secondary"
+                        style="margin: 10px; padding: 10px"
+                    >
+                        Code
+                    </v-btn>
+                </v-expansion-panel-content>
+            </v-expansion-panel>
+        </v-expansion-panels>
+    </v-row>
+</template>
 
 <script>
 export default {
-    name: "ProjectPreview",
-    data: () => ({}),
+    name: 'ProjectPreview',
+    data: () => ({
+        items: [
+            {
+                id: 0,
+                title: 'SnapCars',
+                preview: 'SnapCars.png',
+                tech_stack: [
+                    'Swift',
+                    'MVVM',
+                    'Storyboards',
+                    'CoreData',
+                    'CoreAnimation',
+                    'AlamoFire',
+                    'Kingfisher',
+                    'GoogleMaps SDK',
+                ],
+                link: 'https://intcore.com/Snapcars-Mobile-App/',
+            },
+            {
+                id: 1,
+                title: 'VKader',
+                tech_stack: [
+                    'Swift',
+                    'MVC',
+                    'Storyboards',
+                    'AlamoFire',
+                    'Kingfisher',
+                    'GoogleMaps SDK',
+                ],
+                link:
+                    'https://appadvice.com/game/app/vkader-d9-81-d9-8a-d9-83-d8-a7-d8-af-d8-b1/1300676456',
+                preview: 'Vkader.png',
+            },
+            {
+                id: 2,
+                title: 'Tinder Clone',
+                tech_stack: ['Swift', 'SwiftUI', 'Kingfisher'],
+                preview: 'Tinder.png',
+                link:
+                    'https://drive.google.com/file/d/1qpvWe0uas18DeM9-xyjGsQrMiBjA7QZh/view?usp=sharing',
+                code: 'https://github.com/AhmedNader42/TinderClone',
+            },
+            {
+                id: 3,
+                title: 'Breakpoint',
+                preview: 'Breakpoint.png',
+                tech_stack: ['Swift', 'UIKit', 'Programmatic UI', 'Firebase', 'Google Sign-In'],
+                link:
+                    'https://drive.google.com/file/d/1tZCcsSc6l0e2409Gp64Gn0elTiNKx48S/view?usp=sharing',
+                code: 'https://github.com/AhmedNader42/_BreakPoint',
+            },
+            {
+                id: 4,
+                title: 'Rocket.Chat.Watch',
+                tech_stack: ['WatchKit', 'AlamoFire', 'UserNotifications', 'Swift'],
+                link:
+                    'https://drive.google.com/file/d/1tOY_RcaAN9T3NDcq9dpFkjxAVcGHBW-v/view?usp=sharing',
+                code: 'https://github.com/AhmedNader42/Rocket.Chat.Watch',
+            },
+            {
+                id: 5,
+                title: 'Swift Algorithms club',
+                preview: 'SAC.png',
+                tech_stack: ['Swift'],
+                code:
+                    'https://github.com/raywenderlich/swift-algorithm-club/tree/master/Closest%20Pair',
+            },
+        ],
+    }),
 };
 </script>
