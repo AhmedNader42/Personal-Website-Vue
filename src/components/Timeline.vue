@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="margin: 10px; padding: 10px;">
         <vue-timeline-update
             :date="new Date('2015-06-01')"
             title="Computer Science - Cairo University"

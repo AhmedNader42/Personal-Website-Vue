@@ -1,7 +1,7 @@
 <template>
     <v-row style="padding: 10px; margin 10px">
         <v-expansion-panels inset>
-            <v-expansion-panel v-for="item in items" :key="item.id">
+            <v-expansion-panel v-for="item in items" :key="item.title">
                 <v-expansion-panel-header>
                     <p class="fs-3">
                         {{ item.title }}
@@ -55,8 +55,20 @@ export default {
     data: () => ({
         items: [
             {
-                id: 0,
-                title: 'SnapCars',
+                title: 'Bank (Full-Stack Website)',
+                preview: 'Bank.png',
+                tech_stack: ['Python', 'Vue', 'Django', 'DjangoRestFramework', 'Vuetify', 'Stripe'],
+                link: 'https://www.youtube.com/watch?v=hQmGF3IvkT0',
+                code: 'https://github.com/AhmedNader42/bank',
+            },
+            {
+                title: 'Hacker New Clone (Server-side rendered website)',
+                preview: 'hacker_news_clone.png',
+                tech_stack: ['Javascript', 'NextJS', 'Express', 'Axios', 'NodeJS'],
+                code: 'https://github.com/AhmedNader42/hacker-news-clone',
+            },
+            {
+                title: 'SnapCars (iOS App)',
                 preview: 'SnapCars.png',
                 tech_stack: [
                     'Swift',
@@ -71,8 +83,7 @@ export default {
                 link: 'https://intcore.com/Snapcars-Mobile-App/',
             },
             {
-                id: 1,
-                title: 'VKader',
+                title: 'VKader (iOS App)',
                 tech_stack: [
                     'Swift',
                     'MVC',
@@ -86,8 +97,7 @@ export default {
                 preview: 'Vkader.png',
             },
             {
-                id: 2,
-                title: 'Tinder Clone',
+                title: 'Tinder Clone (iOS App)',
                 tech_stack: ['Swift', 'SwiftUI', 'Kingfisher'],
                 preview: 'Tinder.png',
                 link:
@@ -95,8 +105,7 @@ export default {
                 code: 'https://github.com/AhmedNader42/TinderClone',
             },
             {
-                id: 3,
-                title: 'Breakpoint',
+                title: 'Breakpoint (iOS App)',
                 preview: 'Breakpoint.png',
                 tech_stack: ['Swift', 'UIKit', 'Programmatic UI', 'Firebase', 'Google Sign-In'],
                 link:
@@ -104,16 +113,14 @@ export default {
                 code: 'https://github.com/AhmedNader42/_BreakPoint',
             },
             {
-                id: 4,
-                title: 'Rocket.Chat.Watch',
+                title: 'Rocket.Chat.Watch (WatchOS App)',
                 tech_stack: ['WatchKit', 'AlamoFire', 'UserNotifications', 'Swift'],
                 link:
                     'https://drive.google.com/file/d/1tOY_RcaAN9T3NDcq9dpFkjxAVcGHBW-v/view?usp=sharing',
                 code: 'https://github.com/AhmedNader42/Rocket.Chat.Watch',
             },
             {
-                id: 5,
-                title: 'Swift Algorithms club',
+                title: 'Swift Algorithms club (Algorithm)',
                 preview: 'SAC.png',
                 tech_stack: ['Swift'],
                 code:
