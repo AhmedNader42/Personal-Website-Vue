@@ -80,7 +80,7 @@
 export default {
     name: 'ProfileCard',
     data: () => ({
-        show: false,
+        show: true,
     }),
 };
 </script>
