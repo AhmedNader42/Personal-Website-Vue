@@ -9,9 +9,9 @@
                 >
 
                 <v-expansion-panel-content>
-                    <v-slide-group style="margin: 10px;">
+                    <v-slide-group style="margin: 10px;" show-arrows>
                         <v-slide-item v-for="tech in item.tech_stack" :key="tech">
-                            <v-btn class="mx-2 fs-5" :input-value="active" color="primary">
+                            <v-btn class="mx-2" :input-value="active" color="primary">
                                 {{ tech }}
                             </v-btn>
                         </v-slide-item>
